@@ -1,0 +1,4795 @@
+@charset "utf-8";
+
+* a {
+	color: inherit;
+	text-decoration:none;
+}
+* a:hover {
+	cursor:pointer;
+}
+body {
+    margin:0;
+    padding: 0;
+    font-family: calibri;
+    background-image: url(slider3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFF;
+}
+.front-header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:20%;
+    z-index:100;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.2s linear;
+}
+.front-header:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.logo {
+    position:absolute;
+    top:14%;
+    left:2%;
+    width:21%;
+    height:68%;
+    transition: transform 0.3s linear;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.front-header > ul {
+    position: absolute;
+    top: 36%;
+    right: 0;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    height: 24.5%;
+}
+.front-header > ul > li {
+    position: relative;
+    top: 0;
+    left: 0;
+    float:left;
+}
+.front-header > ul > li > a {
+    display:block;
+    text-decoration:none;
+    padding:7px 18px;
+    text-align:center;
+    text-transform:uppercase;
+    margin:0;
+    transition: transform 0.2s linear;
+}
+.front-header > ul > li > a:not(.active) {
+    color: #FFF;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-shadow: 1px 0px 2px #000000, 0px -1px 2px #000000, -1px 0px 2px #000000, 0px 1px 2px #000000;
+}
+
+.front-header > ul > li > a:hover:not(.active) {
+    /*background-image: linear-gradient(to bottom right, #33FFCC, #FFCCCC);*/
+    color: #FFF;
+    border-bottom: 2px inset #FFF;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.active {
+    /*background-image: linear-gradient(to bottom right, #33FFCC, #FFCCCC);*/
+    color: #FFF;
+    /*transform: scale(1.2);
+    border-radius: 3px;*/
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-bottom: 2px inset #FFF;
+    text-shadow: 1px 0px 2px #000000, 0px -1px 2px #000000, -1px 0px 2px #000000, 0px 1px 2px #000000;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.courses {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 8%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+.courses > p {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+    font-variant: small-caps;
+    color: #FFF;
+    font-size: 40px;
+}
+.middle1 {
+    position: absolute;
+    top: 28%;
+    width: 100%;
+    height: 72%;
+    background-color: rgba(0,0,0,0.5);
+}
+.middle1 > h2 {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    font-size: 35px;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+.long1-container {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 20%;
+    height: 60%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.long1-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 250%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear;
+}
+.long1-container:hover .long1-details {
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: all 0.3s linear;
+}
+.sem1 {
+    position: absolute;
+    top: -7%;
+    left: 0;
+    width: 16%;
+    font-weight: 300;
+    text-align: center;
+    padding: 2.5px 0;
+    transition: background-color 0.1s linear;
+}
+.sem2 {
+    position: absolute;
+    top: -7%;
+    left: 16%;
+    width: 16%;
+    font-weight: 300;
+    text-align: center;
+    padding: 2.5px 0;
+    transition: background-color 0.1s linear;
+}
+.sem3 {
+    position: absolute;
+    top: -7%;
+    left: 33%;
+    width: 16%;
+    font-weight: 300;
+    text-align: center;
+    padding: 2.5px 0;
+    transition: background-color 0.1s linear;
+}
+.sem4 {
+    position: absolute;
+    top: -7%;
+    left: 50%;
+    width: 16%;
+    font-weight: 300;
+    text-align: center;
+    padding: 2.5px 0;
+    transition: background-color 0.1s linear;
+}
+.sem5 {
+    position: absolute;
+    top: -7%;
+    left: 67%;
+    width: 16%;
+    font-weight: 300;
+    text-align: center;
+    padding: 2.5px 0;
+    transition: background-color 0.1s linear;
+}
+.sem6 {
+    position: absolute;
+    top: -7%;
+    left: 84%;
+    width: 16%;
+    font-weight: 300;
+    text-align: center;
+    padding: 2.5px 0;
+    transition: background-color 0.1s linear;
+}
+.sem1-container {
+    position: absolute;
+    bottom: 0;
+    width: 99.7%;
+    height: 89%;
+    border: thin solid #FFF;
+    transform: rotateY(90deg) rotateX(90deg);
+    opacity: 0;
+    transition: all 0.1s linear;
+}
+.sem1-container:hover {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+}
+.sem1-module {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.sem1-module > h3 {
+    position: absolute;
+    top: 0;
+    left: 41%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem1-module > h2 {
+    position: absolute;
+    top: -2%;
+    left: -2%;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #9999FF;
+    color: #000000;
+    padding: 2px 7px;
+    transform: rotateZ(-40deg);
+}
+.sem1-module > ul {
+    position: absolute;
+    top: 19%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.sem1-module > ul > li {
+    padding: 2px 0px;
+}
+.sem1-workshops {
+    position: absolute;
+    top: -0.5%;
+    right: 0;
+    width: 49.8%;
+    height: 45%;
+    border-bottom: thin solid #FFF;
+}
+.sem1-workshops > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem1-workshops > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem1-workshops > ul > li {
+    padding: 2px 0px;
+}
+.sem1-profiles {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 49.8%;
+    height: 55%;
+}
+.sem1-profiles > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem1-profiles > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem1-profiles > ul > li {
+    padding: 2px 0px;
+}
+.sem2-container {
+    position: absolute;
+    bottom: 0;
+    width: 99.7%;
+    height: 89%;
+    border: thin solid #FFF;
+    opacity: 0;
+    transform: rotateY(90deg) rotateX(90deg);
+    transition: all 0.1s linear;
+}
+.sem2-container:hover {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+}
+.sem2-module {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.sem2-module > h3 {
+    position: absolute;
+    top: 0;
+    left: 41%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem2-module > h2 {
+    position: absolute;
+    top: -3%;
+    left: -2%;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #9999FF;
+    color: #000000;
+    padding: 2px 7px;
+    transform: rotateZ(-40deg);
+}
+.sem2-module > ul {
+    position: absolute;
+    top: 19%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.sem2-module > ul > li {
+    padding: 2px 0px;
+}
+.sem2-workshops {
+    position: absolute;
+    top: -0.5%;
+    right: 0;
+    width: 49.8%;
+    height: 45%;
+    border-bottom: thin solid #FFF;
+}
+.sem2-workshops > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem2-workshops > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem2-workshops > ul > li {
+    padding: 2px 0px;
+}
+.sem2-profiles {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 49.8%;
+    height: 55%;
+}
+.sem2-profiles > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem2-profiles > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem2-profiles > ul > li {
+    padding: 2px 0px;
+}
+.sem3-container {
+    position: absolute;
+    bottom: 0;
+    width: 99.7%;
+    height: 89%;
+    border: thin solid #FFF;
+    opacity: 0;
+    transform: rotateY(90deg) rotateX(90deg);
+    transition: all 0.1s linear;
+}
+.sem3-container:hover {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+}
+.sem3-module {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.sem3-module > h3 {
+    position: absolute;
+    top: 0;
+    left: 41%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem3-module > h2 {
+    position: absolute;
+    top: -2%;
+    left: -2%;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #9999FF;
+    color: #000000;
+    padding: 2px 7px;
+    transform: rotateZ(-40deg);
+}
+.sem3-module > ul {
+    position: absolute;
+    top: 19%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.sem2-module > ul > li {
+    padding: 2px 0px;
+}
+.sem3-workshops {
+    position: absolute;
+    top: -0.5%;
+    right: 0;
+    width: 49.8%;
+    height: 45%;
+    border-bottom: thin solid #FFF;
+}
+.sem3-workshops > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem3-workshops > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem3-workshops > ul > li {
+    padding: 2px 0px;
+}
+.sem3-profiles {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 49.8%;
+    height: 55%;
+}
+.sem3-profiles > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem3-profiles > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem3-profiles > ul > li {
+    padding: 2px 0px;
+}
+.sem4-container {
+    position: absolute;
+    bottom: 0;
+    width: 99.7%;
+    height: 89%;
+    border: thin solid #FFF;
+    opacity: 0;
+    transform: rotateY(90deg) rotateX(90deg);
+    transition: all 0.1s linear;
+}
+.sem4-container:hover {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+}
+.sem4-module {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.sem4-module > h3 {
+    position: absolute;
+    top: 0;
+    left: 41%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem4-module > h2 {
+    position: absolute;
+    top: -2%;
+    left: -2%;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #9999FF;
+    color: #000000;
+    padding: 2px 7px;
+    transform: rotateZ(-40deg);
+}
+.sem4-module > ul {
+    position: absolute;
+    top: 19%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.sem4-module > ul > li {
+    padding: 2px 0px;
+}
+.sem4-workshops {
+    position: absolute;
+    top: -0.5%;
+    right: 0;
+    width: 49.8%;
+    height: 45%;
+    border-bottom: thin solid #FFF;
+}
+.sem4-workshops > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem4-workshops > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem4-workshops > ul > li {
+    padding: 2px 0px;
+}
+.sem4-profiles {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 49.8%;
+    height: 55%;
+}
+.sem4-profiles > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem4-profiles > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem4-profiles > ul > li {
+    padding: 2px 0px;
+}
+.sem5-container {
+    position: absolute;
+    bottom: 0;
+    width: 99.7%;
+    height: 89%;
+    border: thin solid #FFF;
+    opacity: 0;
+    transform: rotateY(90deg) rotateX(90deg);
+    transition: all 0.1s linear;
+}
+.sem5-container:hover {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+}
+.sem5-module {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.sem5-module > h3 {
+    position: absolute;
+    top: 0;
+    left: 41%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem5-module > h2 {
+    position: absolute;
+    top: -2%;
+    left: -2%;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #9999FF;
+    color: #000000;
+    padding: 2px 7px;
+    transform: rotateZ(-40deg);
+}
+.sem5-module > ul {
+    position: absolute;
+    top: 19%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.sem5-module > ul > li {
+    padding: 2px 0px;
+}
+.sem5-workshops {
+    position: absolute;
+    top: -0.5%;
+    right: 0;
+    width: 49.8%;
+    height: 45%;
+    border-bottom: thin solid #FFF;
+}
+.sem5-workshops > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem5-workshops > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem5-workshops > ul > li {
+    padding: 2px 0px;
+}
+.sem5-profiles {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 49.8%;
+    height: 55%;
+}
+.sem5-profiles > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem5-profiles > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem5-profiles > ul > li {
+    padding: 2px 0px;
+}
+.sem6-container {
+    position: absolute;
+    bottom: 0;
+    width: 99.7%;
+    height: 89%;
+    border: thin solid #FFF;
+    opacity: 0;
+    transform: rotateY(90deg) rotateX(90deg);
+    transition: all 0.1s linear;
+}
+.sem6-container:hover {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+}
+.sem6-module {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.sem6-module > h3 {
+    position: absolute;
+    top: 0;
+    left: 41%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem6-module > h2 {
+    position: absolute;
+    top: -2%;
+    left: -2%;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #9999FF;
+    color: #000000;
+    padding: 2px 7px;
+    transform: rotateZ(-40deg);
+}
+.sem6-module > ul {
+    position: absolute;
+    top: 19%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.sem6-module > ul > li {
+    padding: 2px 0px;
+}
+.sem6-workshops {
+    position: absolute;
+    top: -0.5%;
+    right: 0;
+    width: 49.8%;
+    height: 45%;
+    border-bottom: thin solid #FFF;
+}
+.sem6-workshops > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem6-workshops > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem6-workshops > ul > li {
+    padding: 2px 0px;
+}
+.sem6-profiles {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 49.8%;
+    height: 55%;
+}
+.sem6-profiles > h3 {
+    position: absolute;
+    top: -12%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.sem6-profiles > ul {
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.sem6-profiles > ul > li {
+    padding: 2px 0px;
+}
+.sem1:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+.sem2:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+.sem3:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+.sem4:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+.sem5:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+.sem6:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+.sem1:hover ~ .sem1-container {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.sem2:hover ~ .sem2-container {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.sem3:hover ~ .sem3-container {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.sem4:hover ~ .sem4-container {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.sem5:hover ~ .sem5-container {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.sem6:hover ~ .sem6-container {
+    transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.long1-details:hover ~ .long1 img {
+    position: absolute;
+    top: 10%;
+}
+.long1-details:hover ~ .long1 .long1-text {
+    position: absolute;
+    bottom: 0;
+}
+.long1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.long1-img > a > img {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 40%;
+    transition: top 0.3s linear;
+}
+.long1-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.long1-text > a > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.long1-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.long1:hover .long1-text {
+    position: absolute;
+    bottom: 0;
+}
+.long1:hover .long1-img > a > img {
+    position: absolute;
+    top: 10%;
+}
+
+
+
+
+
+
+.middle2 {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 130%;
+    border-top: thin solid #FFF;
+    background-color: rgba(0,0,0,0.5);
+}
+.middle2 > h2 {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    font-size: 35px;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+.smart1-container {
+    position: absolute;
+    top: 13%;
+    left: 15%;
+    width: 20%;
+    height: 34%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.smart1-container:hover {
+    overflow: visible;
+}
+.smart1-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 250%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.smart1-container:hover .smart1-details {
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.smart1-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.smart1-outcome > h3 {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart1-outcome > ul {
+    position: absolute;
+    top: 19%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.smart1-outcome > ul > li {
+    padding: 2px 0px;
+}
+.smart1-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.smart1-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart1-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.smart1-duration > ul > li {
+    padding: 2px 0px;
+}
+.smart1-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.smart1-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 38%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart1-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.smart1-profile > ul > li {
+    padding: 2px 0px;
+}
+.smart1-details:hover ~ .smart1 img {
+    position: absolute;
+    top: 5%;
+}
+.smart1-details:hover ~ .smart1 .smart1-text {
+    position: absolute;
+    bottom: 0;
+}
+.smart1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.smart1-img > a > img {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.smart1-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.smart1-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.smart1-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.smart1:hover .smart1-text {
+    position: absolute;
+    bottom: 0;
+}
+.smart1:hover .smart1-img > a > img {
+    position: absolute;
+    top: 5%;
+}
+.smart2-container {
+    position: absolute;
+    top: 13%;
+    left: 40%;
+    width: 20%;
+    height: 34%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.smart2-container:hover {
+    overflow: visible;
+}
+.smart2-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 150%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.smart2-container:hover .smart2-details {
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: all 0.3s linear;
+}
+.smart2-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.smart2-outcome > h3 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart2-outcome > ul {
+    position: absolute;
+    top: 19%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.smart2-outcome > ul > li {
+    padding: 2px 0px;
+}
+.smart2-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.smart2-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart2-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.smart2-duration > ul > li {
+    padding: 2px 0px;
+}
+.smart2-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.smart2-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart2-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.smart2-profile > ul > li {
+    padding: 2px 0px;
+}
+.smart2-details:hover ~ .smart2 img {
+    position: absolute;
+    top: 5%;
+}
+.smart2-details:hover ~ .smart2 .smart2-text {
+    position: absolute;
+    bottom: 0;
+}
+.smart2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.smart2-img > a > img {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.smart2-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.smart2-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.smart2-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.smart2:hover .smart2-text {
+    position: absolute;
+    bottom: 0;
+}
+.smart2:hover .smart2-img > a > img {
+    position: absolute;
+    top: 5.5%;
+}
+.smart3-container {
+    position: absolute;
+    top: 13%;
+    left: 65%;
+    width: 20%;
+    height: 34%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.smart3-container:hover {
+    overflow: visible;
+}
+.smart3-details {
+    position: absolute;
+    top: 0;
+    left: -195%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 150%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: right;
+    transform-style: preserve-3d;
+}
+.smart3-container:hover .smart3-details {
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: all 0.3s linear;
+}
+.smart3-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.smart3-outcome > h3 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart3-outcome > ul {
+    position: absolute;
+    top: 15%;
+    left: -3%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.smart3-outcome > ul > li {
+    padding: 2px 0px;
+}
+.smart3-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.smart3-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart3-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.smart3-duration > ul > li {
+    padding: 2px 0px;
+}
+.smart3-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.smart3-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart3-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.smart3-profile > ul > li {
+    padding: 2px 0px;
+}
+.smart3-details:hover ~ .smart3 img {
+    position: absolute;
+    top: 5%;
+}
+.smart3-details:hover ~ .smart3 .smart3-text {
+    position: absolute;
+    bottom: 0;
+}
+.smart3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.smart3-img > a > img {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 40%;
+    transition: top 0.3s linear;
+}
+.smart3-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.smart3-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.smart3-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.smart3:hover .smart3-text {
+    position: absolute;
+    bottom: 0;
+}
+.smart3:hover .smart3-img > a > img {
+    position: absolute;
+    top: 10%;
+}
+.smart4-container {
+    position: absolute;
+    top: 53%;
+    left: 15%;
+    width: 20%;
+    height: 34%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.smart4-container:hover {
+    overflow: visible;
+}
+.smart4-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 250%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.smart4-container:hover .smart4-details {
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: all 0.3s linear;
+}
+.smart4-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.smart4-outcome > h3 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart4-outcome > ul {
+    position: absolute;
+    top: 20%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.smart4-outcome > ul > li {
+    padding: 2px 0px;
+}
+.smart4-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.smart4-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart4-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.smart4-duration > ul > li {
+    padding: 2px 0px;
+}
+.smart4-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.smart4-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart4-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.smart4-profile > ul > li {
+    padding: 2px 0px;
+}
+.smart4-details:hover ~ .smart4 img {
+    position: absolute;
+    top: 5%;
+}
+.smart4-details:hover ~ .smart4 .smart4-text {
+    position: absolute;
+    bottom: 0;
+}
+.smart4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.smart4-img > a > img {
+    position: absolute;
+    top: 23%;
+    width: 100%;
+    height: 55%;
+    transition: top 0.3s linear;
+}
+.smart4-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.smart4-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.smart4-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.smart4:hover .smart4-text {
+    position: absolute;
+    bottom: 0;
+}
+.smart4:hover .smart4-img > a > img {
+    position: absolute;
+    top: 6%;
+}
+.smart5-container {
+    position: absolute;
+    top: 53%;
+    left: 40%;
+    width: 20%;
+    height: 34%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.smart5-container:hover {
+    overflow: visible;
+}
+.smart5-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 150%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.smart5-container:hover .smart5-details {
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: all 0.3s linear;
+}
+.smart5-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.smart5-outcome > h3 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart5-outcome > ul {
+    position: absolute;
+    top: 19%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.smart5-outcome > ul > li {
+    padding: 2px 0px;
+}
+.smart5-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.smart5-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart5-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.smart5-duration > ul > li {
+    padding: 2px 0px;
+}
+.smart5-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.smart5-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.smart5-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.smart5-profile > ul > li {
+    padding: 2px 0px;
+}
+.smart5-details:hover ~ .smart5 img {
+    position: absolute;
+    top: 5%;
+}
+.smart5-details:hover ~ .smart5 .smart5-text {
+    position: absolute;
+    bottom: 0;
+}
+.smart5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.smart5-img > a > img {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 20%;
+    transition: top 0.3s linear;
+}
+.smart5-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.smart5-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.smart5-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.smart5:hover .smart5-text {
+    position: absolute;
+    bottom: 0;
+}
+.smart5:hover .smart5-img > a > img {
+    position: absolute;
+    top: 20%;
+}
+.middle3 {
+    position: absolute;
+    top: 230%;
+    width: 100%;
+    height: 330%;
+    background-color: rgba(0,0,0,0.5);
+    border-top: thin solid #FFF;
+}
+.middle3 > h2 {
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    font-size: 35px;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+.middle3 > div {
+    margin-top: 0.5%;
+}
+
+
+
+.short1-container {
+    position: absolute;
+    top: 4%;
+    left: 15%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short1-container:hover {
+    overflow: visible;
+}
+.short1-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short1-container:hover .short1-details {
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: all 0.3s linear;
+}
+.short1-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short1-outcome > h3 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short1-outcome > ul {
+    position: absolute;
+    top: 20%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short1-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short1-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short1-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short1-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short1-duration > ul > li {
+    padding: 2px 0px;
+}
+.short1-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short1-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short1-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short1-profile > ul > li {
+    padding: 2px 0px;
+}
+.short1-details:hover ~ .short1 img {
+    position: absolute;
+    top: 6%;
+}
+.short1-details:hover ~ .short1 .short1-text {
+    position: absolute;
+    bottom: 0;
+}
+.short1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short1-img > a > img {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short1-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short1-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short1-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short1:hover .short1-text {
+    position: absolute;
+    bottom: 0;
+}
+.short1:hover .short1-img > a > img {
+    position: absolute;
+    top: 6%;
+}
+.short2-container {
+    position: absolute;
+    top: 4%;
+    left: 40%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short2-container:hover {
+    overflow: visible;
+}
+.short2-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short2-container:hover .short2-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short2-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short2-outcome > h3 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short2-outcome > ul {
+    position: absolute;
+    top: 20%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short2-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short2-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short2-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short2-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short2-duration > ul > li {
+    padding: 2px 0px;
+}
+.short2-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short2-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short2-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short2-profile > ul > li {
+    padding: 2px 0px;
+}
+.short2-details:hover ~ .short2 img {
+    position: absolute;
+    top: 6%;
+}
+.short2-details:hover ~ .short2 .short2-text {
+    position: absolute;
+    bottom: 0;
+}
+.short2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short2-img > a > img {
+    position: absolute;
+    top: 22%;
+    width: 100%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short2-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short2-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short2-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short2:hover .short2-text {
+    position: absolute;
+    bottom: 0;
+}
+.short2:hover .short2-img > a > img {
+    position: absolute;
+    top: 6%;
+}
+.short3-container {
+    position: absolute;
+    top: 4%;
+    left: 65%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short3-container:hover {
+    overflow: visible;
+}
+.short3-details {
+    position: absolute;
+    top: 0;
+    left: -195%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: right;
+    transform-style: preserve-3d;
+}
+.short3-container:hover .short3-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short3-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short3-outcome > h3 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short3-outcome > ul {
+    position: absolute;
+    top: 20%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short3-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short3-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short3-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short3-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short3-duration > ul > li {
+    padding: 2px 0px;
+}
+.short3-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short3-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short3-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short3-profile > ul > li {
+    padding: 2px 0px;
+}
+.short3-details:hover ~ .short3 img {
+    position: absolute;
+    top: 6%;
+}
+.short3-details:hover ~ .short3 .short3-text {
+    position: absolute;
+    bottom: 0;
+}
+.short3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short3-img > a > img {
+    position: absolute;
+    top: 22%;
+    width: 100%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short3-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short3-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short3-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short3:hover .short3-text {
+    position: absolute;
+    bottom: 0;
+}
+.short3:hover .short3-img > a > img {
+    position: absolute;
+    top: 6%;
+}
+.short4-container {
+    position: absolute;
+    top: 19.5%;
+    left: 15%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short4-container:hover {
+    overflow: visible;
+}
+.short4-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short4-container:hover .short4-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short4-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short4-outcome > h3 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short4-outcome > ul {
+    position: absolute;
+    top: 15%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short4-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short4-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short4-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short4-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short4-duration > ul > li {
+    padding: 2px 0px;
+}
+.short4-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short4-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short4-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short4-profile > ul > li {
+    padding: 2px 0px;
+}
+.short4-details:hover ~ .short4 img {
+    position: absolute;
+    top: 5%;
+}
+.short4-details:hover ~ .short4 .short4-text {
+    position: absolute;
+    bottom: 0;
+}
+.short4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short4-img > a > img {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short4-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short4-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short4-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short4:hover .short4-text {
+    position: absolute;
+    bottom: 0;
+}
+.short4:hover .short4-img > a > img {
+    position: absolute;
+    top: 5%;
+}
+.short5-container {
+    position: absolute;
+    top: 19.5%;
+    left: 40%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short5-container:hover {
+    overflow: visible;
+}
+.short5-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short5-container:hover .short5-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short5-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short5-outcome > h3 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short5-outcome > ul {
+    position: absolute;
+    top: 20%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short5-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short5-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short5-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short5-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short5-duration > ul > li {
+    padding: 2px 0px;
+}
+.short5-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short5-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short5-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short5-profile > ul > li {
+    padding: 2px 0px;
+}
+.short5-details:hover ~ .short5 img {
+    position: absolute;
+    top: 0;
+}
+.short5-details:hover ~ .short5 .short5-text {
+    position: absolute;
+    bottom: 0;
+}
+.short5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short5-img > a > img {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    height: 60%;
+    transition: top 0.3s linear;
+}
+.short5-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short5-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short5-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short5:hover .short5-text {
+    position: absolute;
+    bottom: 0;
+}
+.short5:hover .short5-img > a > img {
+    position: absolute;
+    top: 0;
+}
+.short6-container {
+    position: absolute;
+    top: 19.5%;
+    left: 65%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short6-container:hover {
+    overflow: visible;
+}
+.short6-details {
+    position: absolute;
+    top: 0;
+    left: -195%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: right;
+    transform-style: preserve-3d;
+}
+.short6-container:hover .short6-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short6-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short6-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short6-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short6-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short6-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short6-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short6-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short6-duration > ul > li {
+    padding: 2px 0px;
+}
+.short6-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short6-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short6-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short6-profile > ul > li {
+    padding: 2px 0px;
+}
+.short6-details:hover ~ .short6 img {
+    position: absolute;
+    top: 3%;
+}
+.short6-details:hover ~ .short6 .short6-text {
+    position: absolute;
+    bottom: 0;
+}
+.short6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short6-img > a > img {
+    position: absolute;
+    top: 22.5%;
+    left: 22.5%;
+    width: 55%;
+    height: 55%;
+    transition: top 0.3s linear;
+}
+.short6-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short6-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short6-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short6:hover .short6-text {
+    position: absolute;
+    bottom: 0;
+}
+.short6:hover .short6-img > a > img {
+    position: absolute;
+    top: 3%;
+}
+.short7-container {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short7-container:hover {
+    overflow: visible;
+}
+.short7-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short7-container:hover .short7-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short7-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short7-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short7-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short7-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short7-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short7-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short7-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short7-duration > ul > li {
+    padding: 2px 0px;
+}
+.short7-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short7-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short7-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short7-profile > ul > li {
+    padding: 2px 0px;
+}
+.short7-details:hover ~ .short7 img {
+    position: absolute;
+    top: 4%;
+}
+.short7-details:hover ~ .short7 .short7-text {
+    position: absolute;
+    bottom: 0;
+}
+.short7 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short7-img > a > img {
+    position: absolute;
+    top: 22.5%;
+    left: 20.5%;
+    width: 60%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short7-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short7-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short7-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short7:hover .short7-text {
+    position: absolute;
+    bottom: 0;
+}
+.short7:hover .short7-img > a > img {
+    position: absolute;
+    top: 4%;
+}
+.short8-container {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short8-container:hover {
+    overflow: visible;
+}
+.short8-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short8-container:hover .short8-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short8-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short8-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short8-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short8-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short8-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short8-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short8-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short8-duration > ul > li {
+    padding: 2px 0px;
+}
+.short8-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short8-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short8-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short8-profile > ul > li {
+    padding: 2px 0px;
+}
+.short8-details:hover ~ .short8 img {
+    position: absolute;
+    top: 4%;
+}
+.short8-details:hover ~ .short8 .short8-text {
+    position: absolute;
+    bottom: 0;
+}
+.short8 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short8-img > a > img {
+    position: absolute;
+    top: 22.5%;
+    left: 20.5%;
+    width: 60%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short8-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short8-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short8-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short8:hover .short8-text {
+    position: absolute;
+    bottom: 0;
+}
+.short8:hover .short8-img > a > img {
+    position: absolute;
+    top: 4%;
+}
+.short9-container {
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short9-container:hover {
+    overflow: visible;
+}
+.short9-details {
+    position: absolute;
+    top: 0;
+    left: -195%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: right;
+    transform-style: preserve-3d;
+}
+.short9-container:hover .short9-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short9-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short9-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short9-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short9-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short9-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short9-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short9-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short9-duration > ul > li {
+    padding: 2px 0px;
+}
+.short9-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short9-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short9-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short9-profile > ul > li {
+    padding: 2px 0px;
+}
+.short9-details:hover ~ .short9 img {
+    position: absolute;
+    top: 3%;
+}
+.short9-details:hover ~ .short9 .short9-text {
+    position: absolute;
+    bottom: 0;
+}
+.short9 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short9-img > a > img {
+    position: absolute;
+    top: 22.5%;
+    left: 22.5%;
+    width: 55%;
+    height: 55%;
+    transition: top 0.3s linear;
+}
+.short9-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short9-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short9-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short9:hover .short9-text {
+    position: absolute;
+    bottom: 0;
+}
+.short9:hover .short9-img > a > img {
+    position: absolute;
+    top: 3%;
+}
+.short10-container {
+    position: absolute;
+    top: 50.5%;
+    left: 15%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short10-container:hover {
+    overflow: visible;
+}
+.short10-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short10-container:hover .short10-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short10-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short10-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short10-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short10-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short10-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short10-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short10-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short10-duration > ul > li {
+    padding: 2px 0px;
+}
+.short10-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short10-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short10-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short10-profile > ul > li {
+    padding: 2px 0px;
+}
+.short10-details:hover ~ .short10 img {
+    position: absolute;
+    top: 6%;
+}
+.short10-details:hover ~ .short10 .short10-text {
+    position: absolute;
+    bottom: 0;
+}
+.short10 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short10-img > a > img {
+    position: absolute;
+    top: 24%;
+    left: 15.5%;
+    width: 70%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short10-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short10-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short10-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short10:hover .short10-text {
+    position: absolute;
+    bottom: 0;
+}
+.short10:hover .short10-img > a > img {
+    position: absolute;
+    top: 6%;
+}
+.short11-container {
+    position: absolute;
+    top: 50.5%;
+    left: 40%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short11-container:hover {
+    overflow: visible;
+}
+.short11-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short11-container:hover .short11-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short11-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short11-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short11-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short11-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short11-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short11-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short11-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short11-duration > ul > li {
+    padding: 2px 0px;
+}
+.short11-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short11-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short11-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short11-profile > ul > li {
+    padding: 2px 0px;
+}
+.short11-details:hover ~ .short11 img {
+    position: absolute;
+    top: 17%;
+}
+.short11-details:hover ~ .short11 .short11-text {
+    position: absolute;
+    bottom: 0;
+}
+.short11 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short11-img > a > img {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    height: 25%;
+    transition: top 0.3s linear;
+}
+.short11-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short11-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short11-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short11:hover .short11-text {
+    position: absolute;
+    bottom: 0;
+}
+.short11:hover .short11-img > a > img {
+    position: absolute;
+    top: 17%;
+}
+.short12-container {
+    position: absolute;
+    top: 50.5%;
+    left: 65%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short12-container:hover {
+    overflow: visible;
+}
+.short12-details {
+    position: absolute;
+    top: 0;
+    left: -195%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: right;
+    transform-style: preserve-3d;
+}
+.short12-container:hover .short12-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short12-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short12-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short12-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short12-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short12-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short12-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short12-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short12-duration > ul > li {
+    padding: 2px 0px;
+}
+.short12-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short12-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short12-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short12-profile > ul > li {
+    padding: 2px 0px;
+}
+.short12-details:hover ~ .short12 img {
+    position: absolute;
+    top: 5%;
+}
+.short12-details:hover ~ .short12 .short12-text {
+    position: absolute;
+    bottom: 0;
+}
+.short12 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short12-img > a > img {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short12-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short12-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short12-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short12:hover .short12-text {
+    position: absolute;
+    bottom: 0;
+}
+.short12:hover .short12-img > a > img {
+    position: absolute;
+    top: 5%;
+}
+.short13-container {
+    position: absolute;
+    top: 66%;
+    left: 15%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short13-container:hover {
+    overflow: visible;
+}
+.short13-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short13-container:hover .short13-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short13-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short13-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short13-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short13-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short13-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short13-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short13-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short13-duration > ul > li {
+    padding: 2px 0px;
+}
+.short13-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short13-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short13-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short13-profile > ul > li {
+    padding: 2px 0px;
+}
+.short13-details:hover ~ .short13 img {
+    position: absolute;
+    top: 5%;
+}
+.short13-details:hover ~ .short13 .short13-text {
+    position: absolute;
+    bottom: 0;
+}
+.short13 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short13-img > a > img {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 60%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short13-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short13-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short13-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short13:hover .short13-text {
+    position: absolute;
+    bottom: 0;
+}
+.short13:hover .short13-img > a > img {
+    position: absolute;
+    top: 5%;
+}
+.short14-container {
+    position: absolute;
+    top: 66%;
+    left: 40%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short14-container:hover {
+    overflow: visible;
+}
+.short14-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 106%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short14-container:hover .short14-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short14-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short14-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short14-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short14-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short14-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short14-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short14-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short14-duration > ul > li {
+    padding: 2px 0px;
+}
+.short14-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short14-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short14-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short14-profile > ul > li {
+    padding: 2px 0px;
+}
+.short14-details:hover ~ .short14 img {
+    position: absolute;
+    top: 5%;
+}
+.short14-details:hover ~ .short14 .short14-text {
+    position: absolute;
+    bottom: 0;
+}
+.short14 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short14-img > a > img {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 60%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short14-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short14-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short14-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short14:hover .short14-text {
+    position: absolute;
+    bottom: 0;
+}
+.short14:hover .short14-img > a > img {
+    position: absolute;
+    top: 5%;
+}
+.short15-container {
+    position: absolute;
+    top: 66%;
+    left: 65%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short15-container:hover {
+    overflow: visible;
+}
+.short15-details {
+    position: absolute;
+    top: 0;
+    left: -195%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 106%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: right;
+    transform-style: preserve-3d;
+}
+.short15-container:hover .short15-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short15-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short15-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short15-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short15-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short15-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short15-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short15-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short15-duration > ul > li {
+    padding: 2px 0px;
+}
+.short15-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short15-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short15-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short15-profile > ul > li {
+    padding: 2px 0px;
+}
+.short15-details:hover ~ .short15 img {
+    position: absolute;
+    top: 3%;
+}
+.short15-details:hover ~ .short15 .short15-text {
+    position: absolute;
+    bottom: 0;
+}
+.short15 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short15-img > a > img {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 60%;
+    height: 55%;
+    transition: top 0.3s linear;
+}
+.short15-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short15-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short15-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short15:hover .short15-text {
+    position: absolute;
+    bottom: 0;
+}
+.short15:hover .short15-img > a > img {
+    position: absolute;
+    top: 3%;
+}
+.short16-container {
+    position: absolute;
+    top: 81.5%;
+    left: 15%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short16-container:hover {
+    overflow: visible;
+}
+.short16-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 106%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short16-container:hover .short16-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short16-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short16-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short16-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short16-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short16-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short16-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short16-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short16-duration > ul > li {
+    padding: 2px 0px;
+}
+.short16-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short16-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short16-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short16-profile > ul > li {
+    padding: 2px 0px;
+}
+.short16-details:hover ~ .short16 img {
+    position: absolute;
+    top: 3%;
+}
+.short16-details:hover ~ .short16 .short16-text {
+    position: absolute;
+    bottom: 0;
+}
+.short16 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short16-img > a > img {
+    position: absolute;
+    top: 23%;
+    left: 12.5%;
+    width: 75%;
+    height: 55%;
+    transition: top 0.3s linear;
+}
+.short16-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short16-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short16-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short16:hover .short16-text {
+    position: absolute;
+    bottom: 0;
+}
+.short16:hover .short16-img > a > img {
+    position: absolute;
+    top: 3%;
+}
+.short17-container {
+    position: absolute;
+    top: 81.5%;
+    left: 40%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short17-container:hover {
+    overflow: visible;
+}
+.short17-details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 125%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.short17-container:hover .short17-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short17-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short17-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short17-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short17-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short17-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short17-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short17-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short17-duration > ul > li {
+    padding: 2px 0px;
+}
+.short17-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short17-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short17-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short17-profile > ul > li {
+    padding: 2px 0px;
+}
+.short17-details:hover ~ .short17 img {
+    position: absolute;
+    top: 5%;
+}
+.short17-details:hover ~ .short17 .short17-text {
+    position: absolute;
+    bottom: 0;
+}
+.short17 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short17-img > a > img {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 50%;
+    transition: top 0.3s linear;
+}
+.short17-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short17-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short17-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short17:hover .short17-text {
+    position: absolute;
+    bottom: 0;
+}
+.short17:hover .short17-img > a > img {
+    position: absolute;
+    top: 5%;
+}
+.short18-container {
+    position: absolute;
+    top: 81.5%;
+    left: 65%;
+    width: 20%;
+    height: 13%;
+    border: thin solid #FFF;
+    border-radius: 5px;
+}
+.short18-container:hover {
+    overflow: visible;
+}
+.short18-details {
+    position: absolute;
+    top: 0;
+    left: -195%;
+    margin: 0;
+    padding: 0;
+    width: 195%;
+    height: 125%;
+    background-color: rgba(0,0,0,0.9);
+    border: thin solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    transform: rotateY(90deg) rotateX(90deg);
+    transform-origin: right;
+    transform-style: preserve-3d;
+}
+.short18-container:hover .short18-details {
+    transition: all 0.3s linear;
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.short18-outcome {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: thin solid #FFF;
+    overflow: hidden;
+}
+.short18-outcome > h3 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short18-outcome > ul {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: 85%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.short18-outcome > ul > li {
+    padding: 2px 0px;
+}
+.short18-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-bottom: thin solid #FFF;
+}
+.short18-duration > h3 {
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short18-duration > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short18-duration > ul > li {
+    padding: 2px 0px;
+}
+.short18-profile {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+.short18-profile > h3 {
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: thin solid #FFF;
+}
+.short18-profile > ul {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    font-weight: 100;
+    font-size: 14px;
+}
+.short18-profile > ul > li {
+    padding: 2px 0px;
+}
+.short18-details:hover ~ .short18 img {
+    position: absolute;
+    top: 10%;
+}
+.short18-details:hover ~ .short18 .short18-text {
+    position: absolute;
+    bottom: 0;
+}
+.short18 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #FFF;
+    border-radius: 5px;
+    background-color: rgba(179,159,159,0.2);
+}
+.short18-img > a > img {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 40%;
+    transition: top 0.3s linear;
+}
+.short18-text {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.4);
+    transition: bottom 0.3s linear;
+}
+.short18-text > h3 {
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+}
+.short18-text > p {
+    position: absolute;
+    bottom: 0;
+    left: 5%
+}
+.short18:hover .short18-text {
+    position: absolute;
+    bottom: 0;
+}
+.short18:hover .short18-img > a > img {
+    position: absolute;
+    top: 10%;
+}
+.footer1 {
+    position: absolute;
+    top: 560%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.8);
+    border-top: thin solid #FFF;
+}
+.footer-logo {
+    position: absolute;
+    top:  24%;
+    left: 5%;
+    width: 31%;
+    height: 52%;
+    transition: transform 0.3s linear;
+}
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+.footer1 > address {
+    position: absolute;
+    top: 34%;
+    left: 45%;
+    color: #FFF;
+    width: 25%;
+    font-size: 22px;
+    font-style: normal;
+}
+.fb {
+    position: absolute;
+    right: 16%;
+    top: 35%;
+    height: 30%;
+    width: 6%;
+    transition: transform 0.3s linear;
+    filter:brightness(90%);
+}
+.fb:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp {
+    position: absolute;
+    right:7%;
+    top: 35%;
+    height: 30%;
+    width: 6%;
+    transition: transform 0.3s linear;
+    filter:brightness(90%);
+}
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.footer2 {
+    position: absolute;
+    top: 600%;
+    width: 100%;
+    height: 8%;
+    margin: 0;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.9);
+    border-top: thin solid #FFF;
+}
+.footer2 > p {
+    position: absolute;
+    left: 40%;
+    top: 0;
+    color: #FFF;
+    display: inline;
+    width: 20%;
+    text-align: center;
+}
